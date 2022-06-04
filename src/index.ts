@@ -1,13 +1,10 @@
-import { DataLayer } from "./data-layer/data-layer";
-import { Logger } from "./logger/logger";
-import { Ticket } from "./ticket/ticket";
+import { container } from "./inversify.config";
 import { ITicket } from "./ticket/ticket.interface";
+import { TYPES } from "./types";
 
 class TicketService {
   start() {
-    const logger = new Logger();
-    const dataLayer = new DataLayer<ITicket>();
-    const ticket = new Ticket(logger, dataLayer);
+    const ticket = container.get<ITicket<any>>(TYPES.Ticket);
 
     ticket.create({
       person: {

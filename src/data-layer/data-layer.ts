@@ -1,5 +1,7 @@
+import { injectable } from "inversify";
 import { IDataLayer } from "./data-layer.interface";
 
+@injectable()
 export class DataLayer<T extends { _id: number }> implements IDataLayer<T> {
   constructor(private readonly store: T[] = []) {}
 

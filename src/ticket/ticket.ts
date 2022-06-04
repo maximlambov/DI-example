@@ -1,15 +1,15 @@
 import { ILogger } from "../logger/logger.interface";
-import {
-  IDataLayer
-} from "../data-layer/data-layer.interface";
 import { ICreateTicketDto } from "./dto/create-ticket.dto";
 import { IUpdateticketDto } from "./dto/update-ticket.dto";
 import { ITicket } from "./ticket.interface";
+import { inject, injectable } from "inversify";
+import { TYPES } from "../types";
 
-export class Ticket {
+@injectable()
+export class Ticket implements ITicket<any> {
   constructor(
-    private readonly logger: ILogger,
-    private readonly dataLayer: IDataLayer<ITicket>
+    @inject(TYPES.Logger) private readonly logger: ILogger,
+    @inject(TYPES.DataLayer) private readonly dataLayer: any
   ) {}
 
   create(payload: ICreateTicketDto) {
