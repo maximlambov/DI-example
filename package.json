@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-typescript",
+  "version": "1.0.0",
+  "description": "JavaScript and TypeScript example starter project",
+  "main": "index.html",
+  "dependencies": {
+    "inversify": "6.0.1",
+    "nodemon": "^2.0.16",
+    "reflect-metadata": "0.1.13",
+    "ts-node": "^10.8.1"
+  },
+  "devDependencies": {
+    "typescript": "4.4.4"
+  }
+}

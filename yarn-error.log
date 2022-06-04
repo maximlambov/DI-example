@@ -1,0 +1,43 @@
+Arguments: 
+  /home/maxim/.nvm/versions/node/v18.1.0/bin/node /home/maxim/.nvm/versions/node/v18.1.0/bin/yarn
+
+PATH: 
+  /home/maxim/.nvm/versions/node/v18.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.1.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/maxim/WebstormProjects/lrnwzs/package.json: Unexpected token } in JSON at position 288
+      at JSON.parse (<anonymous>)
+      at /home/maxim/.nvm/versions/node/v18.1.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/maxim/.nvm/versions/node/v18.1.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/maxim/.nvm/versions/node/v18.1.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "vanilla-typescript",
+    "version": "1.0.0",
+    "description": "JavaScript and TypeScript example starter project",
+    "main": "index.html",
+    "dependencies": {
+      "inversify": "6.0.1",
+      "reflect-metadata": "0.1.13"
+    },
+    "devDependencies": {
+      "typescript": "4.4.4"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
